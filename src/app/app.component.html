@@ -1,0 +1,69 @@
+<div class="header text-center mb-3">
+  <div class="pb-5 pt-5">
+    <h1>ng2-adsense</h1>
+    <p class="lead mb-4">Angular AdSense Component</p>
+    <mdo-github-button
+      size="large"
+      count="true"
+      user="scttcper"
+      repo="ng2-adsense"
+      >
+    </mdo-github-button>
+  </div>
+</div>
+
+<div class="container mb-3">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10 col-xl-9">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Demo</h4>
+          <h6 class="card-subtitle mb-2 text-danger">Disable Adblock</h6>
+          <p class="card-text">
+            Shows AdSense Ad loading on route change.
+            Sometimes a blank or identical AdSense ad is displayed.
+          </p>
+          <ul>
+            <li><strong>Page 1</strong> - responsive ads</li>
+            <li><strong>Page 2</strong> - ads with specified width</li>
+            <li><strong>Page 3 and 4</strong> - same component but w/ setTimeout when the params are changed
+            to refresh the ads</li>
+          </ul>
+          <hr>
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Page 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/2" routerLinkActive="active">Page 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/ads/3" routerLinkActive="active">Page 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/ads/4" routerLinkActive="active">Page 4</a>
+            </li>
+          </ul>
+          <hr>
+          <div class="mt-3" style="min-height:220px">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container text-center pt-3 pb-3">
+    <small class="text-muted">
+      Demo using Angular {{ version.full }}
+      <br>
+      Not affiliated with Google AdSense
+    </small>
+    <br>
+    <small class="text-muted">
+      <a href="https://github.com/scttcper/ng2-adsense/">GitHub</a>
+    </small>
+  </div>
+</footer>
